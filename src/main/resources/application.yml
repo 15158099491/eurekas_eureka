@@ -2,8 +2,12 @@ eureka:
   client:
     service-url:
       defaultZone: http://localhost:8761/eureka/
-
     register-with-eureka: false
+
+  #开发环境可以false，但是生产环境尽量true。
+  #关于eureka 环境的自我保护，开发环境dev时可以关闭为false，但是生产环境prod时要打卡为true。
+  server:
+    enable-self-preservation: false
 
 spring:
   application:
